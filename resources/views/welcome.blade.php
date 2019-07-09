@@ -64,6 +64,7 @@
         </style>
     </head>
     <body>
+           
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -80,8 +81,12 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="m-b-md">
+                    @foreach ($posts as $key => $post)
+                        <h2> {{ ++$key }}. Post</h2>;
+                        {{ $post }}
+                    @endforeach                    
+                
                 </div>
 
                 <div class="links">
