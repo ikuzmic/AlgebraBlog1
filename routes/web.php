@@ -34,3 +34,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //https://v4-alpha.getbootstrap.com/examples/blog/
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

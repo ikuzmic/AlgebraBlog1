@@ -13,8 +13,10 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('Posts', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('title');
+            $table->text('body');
             $table->timestamps();
         });
     }
@@ -26,6 +28,7 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Posts');
+        Schema::dropIfExists('posts');
     }
 }
+// php artisan make:migration --create=posts create_posts_table
